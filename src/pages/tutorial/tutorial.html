@@ -1,0 +1,20 @@
+<ion-header no-shadow>
+    <ion-navbar>
+        <ion-buttons end *ngIf="showSkip">
+            <button ion-button (click)="startApp()" color="primary">ENTER THE APP</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+    <ion-slides [options]="{pager: true}" (ionWillChange)="onSlideChangeStart($event)">
+    <ion-slide *ngFor="let slide of slides">
+        <video width="100%" preload="metadata" autoplay="autoplay" loop="true" webkit-playsinline="webkit-playsinline"
+               class="videoPlayer">
+            <source src="{{slide.image}}" type="video/mp4"/>
+        </video>
+    <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+    <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    </ion-slides>
+</ion-content>

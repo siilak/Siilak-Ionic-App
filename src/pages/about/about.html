@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>About</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="about-header">
+    <img src="assets/img/appicon.svg">
+  </div>
+  <div padding class="about-info">
+    <h4>Fermiums observare!</h4>
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-icon name="calendar" item-left></ion-icon>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="conferenceDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <ion-label>Your Location</ion-label>
+        <ion-select>
+          <ion-option value="madison" selected>Tallinn, Estonia</ion-option>
+          <ion-option value="austin">Stockholm, Sweden</ion-option>
+          <ion-option value="chicago">Helsinki, Finland</ion-option>
+          <ion-option value="seattle">Riga, Latvia</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <p>
+      Cum caesium prarere, omnes specieses aperto raptus, bi-color humani generises.
+      Cum bubo assimilant, omnes compateres locus salvus, azureus cursuses.
+      Eheu, gabalium! Raptus, bassus aususs aegre magicae de albus, altus deus.
+      Cum cannabis persuadere, omnes tumultumquees anhelare ferox, pius galluses.
+      Alter, altus ionicis tormentos etiam imperium de superbus, peritus historia.
+      Barbatus, peritus hydras rare attrahendam de noster, festus competition.
+      fluctuis potus!
+    </p>
+  </div>
+</ion-content>
