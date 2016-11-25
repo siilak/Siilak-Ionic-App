@@ -15,3 +15,5 @@ This is purely a demo of Ionic 2 with TypeScript. It is still in development.
 
 ## Login as user and see profile
 - login names: marko, martin or nicole. Password can be random.
+## TODO
+- pages routing for hashtag url's
